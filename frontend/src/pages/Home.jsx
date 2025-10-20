@@ -69,8 +69,25 @@ function Home() {
                      Skontaktuj się z nami
                   </h1>
                </div>
-            </div>
 
+               <div className="mx-auto w-4/5 p-6 mt-8 bg-white rounded-lg border-w border-black shadow-lg">
+                  <h1 className="p-2 text-xl font-semibold tracking-tight">
+                     Kiedy nas znajdziesz?
+                  </h1>
+               </div>
+
+               <div className="mx-auto h-[500px] w-4/5 rounded-lg overflow-hidden shadow-lg mt-8">
+                  <iframe 
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2552.7360077524163!2d19.225606896789557!3d50.22215350000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716c33f70d2e549%3A0xc667fd89faca9c43!2sBasen%20Jaworzno!5e0!3m2!1spl!2spl!4v1761001478610!5m2!1spl!2spl"
+                     width="100%"
+                     height="100%"
+                     style={{ border: 0 }}
+                     allowFullScreen=""
+                     loading="lazy"
+                     referrerPolicy="no-referrer-when-downgrade"
+                  />
+               </div>
+            </div>
          </section>
       </div>
    );
