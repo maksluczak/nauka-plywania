@@ -6,6 +6,7 @@ import Login from "./pages/Login"
 import Dashboard from "./pages/Dashboard"
 import NotFound from "./pages/NotFound"
 import ProtectedRoute from "./components/ProtectedRoute"
+import Nav from "./components/navigation/Nav";
 
 function Logout() {
   localStorage.clear()
@@ -20,23 +21,26 @@ function RegisterAndLogout() {
 function App() {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/login" element={<Login />}/>
-        <Route path="/logout" element={<Logout />}/>
-        <Route path="/register" element={<RegisterAndLogout />}/>
-        <Route path="*" element={<NotFound />}/>
-        <Route 
-          path="/dashboard" 
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <div className="min-h-screen">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/logout" element={<Logout />}/>
+          <Route path="/register" element={<RegisterAndLogout />}/>
+          <Route path="*" element={<NotFound />}/>
+          <Route 
+            path="/dashboard" 
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+        </div>
+      </BrowserRouter>
   )
 }
 
