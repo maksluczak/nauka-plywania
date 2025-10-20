@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard"
 import NotFound from "./pages/NotFound"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Nav from "./components/navigation/Nav";
+import Footer from "./components/footer/Footer"
 
 function Logout() {
   localStorage.clear()
@@ -24,7 +25,7 @@ function App() {
       <BrowserRouter>
         <div className="min-h-screen">
           <Nav />
-          <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          
             <Routes>
               <Route path="/" element={<Home />}/>
               <Route path="/login" element={<Login />}/>
@@ -40,7 +41,7 @@ function App() {
                 }
               />
             </Routes>
-          </section>
+          <Footer />
         </div>
       </BrowserRouter>
   )
