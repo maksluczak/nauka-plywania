@@ -23,22 +23,24 @@ function App() {
   return (
       <BrowserRouter>
         <div className="min-h-screen">
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/login" element={<Login />}/>
-          <Route path="/logout" element={<Logout />}/>
-          <Route path="/register" element={<RegisterAndLogout />}/>
-          <Route path="*" element={<NotFound />}/>
-          <Route 
-            path="/dashboard" 
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
+          <Nav />
+          <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+            <Routes>
+              <Route path="/" element={<Home />}/>
+              <Route path="/login" element={<Login />}/>
+              <Route path="/logout" element={<Logout />}/>
+              <Route path="/register" element={<RegisterAndLogout />}/>
+              <Route path="*" element={<NotFound />}/>
+              <Route 
+                path="/dashboard" 
+                element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </section>
         </div>
       </BrowserRouter>
   )
