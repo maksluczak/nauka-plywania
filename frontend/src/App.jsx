@@ -1,6 +1,7 @@
 import React from "react"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import Home from "./pages/Home"
+import Staff from "./pages/Staff";
 import Register from "./pages/Register"
 import Login from "./pages/Login"
 import Dashboard from "./pages/Dashboard"
@@ -28,6 +29,7 @@ function App() {
           
             <Routes>
               <Route path="/" element={<Home />}/>
+              <Route path="/staff" element={<Staff />}/>
               <Route path="/login" element={<Login />}/>
               <Route path="/logout" element={<Logout />}/>
               <Route path="/register" element={<RegisterAndLogout />}/>

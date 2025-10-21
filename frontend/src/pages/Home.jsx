@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Home() {
    return (
       <div className="min-h-screen">
@@ -11,12 +13,16 @@ function Home() {
                      Profesjonalne lekcje pływania dla osób w każdym wieku i na każdym poziomie zaawansowania. Jesteśmy do Twojej dyspozycji siedem dni w tygodniu.
                   </p>
                   <div className="flex flex-wrap gap-10 justify-center mt-10">
-                     <button className="border-2 border-black text-white bg-black hover:text-black hover:bg-white p-4 focus:outline-none rounded-lg">
-                        Zapisz się na zajęcia
-                     </button>
-                     <button className="border-2 border-black hover:text-white hover:bg-black p-4 focus:outline-none rounded-lg">
-                        Dowiedz się więcej
-                     </button>
+                     <Link to="/login">
+                        <button className="border-2 border-black text-white bg-black hover:text-black hover:bg-white p-4 focus:outline-none rounded-lg">
+                           Zapisz się na zajęcia
+                        </button>
+                     </Link>
+                     <Link to="/">
+                        <button className="border-2 border-black hover:text-white hover:bg-black p-4 focus:outline-none rounded-lg">
+                           Dowiedz się więcej
+                        </button>
+                     </Link>
                   </div>
                </div>
             </div>
@@ -72,7 +78,7 @@ function Home() {
 
                <div className="mx-auto w-4/5 p-6 mt-8 bg-white rounded-lg border-w border-black shadow-lg">
                   <h1 className="p-2 text-xl font-semibold tracking-tight">
-                     Kiedy nas znajdziesz?
+                     Kiedy nas spotkasz?
                   </h1>
                </div>
 
@@ -87,6 +93,22 @@ function Home() {
                      referrerPolicy="no-referrer-when-downgrade"
                   />
                </div>
+            </div>
+         </section>
+
+         <section className="py-30 px-4 sm:px-6 lg:px-8 bg-black">
+            <div className="max-w-3xl mx-auto text-center">
+               <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-balance text-white">
+                  Poznaj naszą załogę!
+               </h1>
+               <p className="text-2xl text-gray-200">
+                  Nasi instruktorzy są pasjonatami pływania i oddani pomaganiu Ci w osiągnięciu Twoich celów w wodzie
+               </p>
+               <Link to="/staff">
+                  <button className="border-2 border-white bg-white py-3 px-6 focus:outline-none rounded-lg mt-8">
+                     Nasi trenerzy
+                  </button>
+               </Link>
             </div>
          </section>
       </div>
