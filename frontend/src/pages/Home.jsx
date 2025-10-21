@@ -74,12 +74,46 @@ function Home() {
                   <h1 className="p-2 text-xl font-semibold tracking-tight">
                      Skontaktuj się z nami
                   </h1>
+                  <div className="flex gap-3 px-2 py-1">
+                     <div>
+                        <p className="text-base">Numer telefonu</p>
+                        <p className="text-base text-gray-500/80">+48 000 000 000</p>
+                      </div>
+                  </div>
+                  <div className="flex gap-3 px-2 py-1">
+                     <div>
+                        <p className="text-base">Email</p>
+                        <p className="text-base text-gray-500/80">example@gmail.com</p>
+                      </div>
+                  </div>
+                  <div className="flex gap-3 px-2 py-1">
+                     <div>
+                        <p className="text-base">Adres basenu</p>
+                        <p className="text-base text-gray-500/80">Inwalidów Wojennych 20, 43-609, Jaworzno</p>
+                      </div>
+                  </div>
                </div>
 
                <div className="mx-auto w-4/5 p-6 mt-8 bg-white rounded-lg border-w border-black shadow-lg">
                   <h1 className="p-2 text-xl font-semibold tracking-tight">
                      Kiedy nas spotkasz?
                   </h1>
+                  <div className="flex justify-between text-base text-gray-500/80">
+                     <span className="px-2 py-1">
+                        Poniedziałek-Piątek
+                     </span>
+                     <span>
+                        15:00-20:00
+                     </span>
+                  </div>
+                  <div className="flex justify-between text-base text-gray-500/80">
+                     <span className="px-2 py-1">
+                        Sobota-Niedziela
+                     </span>
+                     <span>
+                        8:00-13:00
+                     </span>
+                  </div>
                </div>
 
                <div className="mx-auto h-[500px] w-4/5 rounded-lg overflow-hidden shadow-lg mt-8">
