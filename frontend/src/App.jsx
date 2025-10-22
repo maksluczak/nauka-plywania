@@ -26,7 +26,6 @@ function App() {
       <BrowserRouter>
         <div className="min-h-screen">
           <Nav />
-          
             <Routes>
               <Route path="/" element={<Home />}/>
               <Route path="/staff" element={<Staff />}/>
