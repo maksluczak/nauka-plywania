@@ -26,13 +26,14 @@ class StudentDelete(generics.DestroyAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        return Student.objects.filter(user_obj=user)
-
-    
+        return Student.objects.filter(user_obj=user)    
     
 class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer 
     permission_classes = [AllowAny]
 
+class ClassListCreate(generics.ListCreateAPIView):
+    serializer_class = ClassSerializier
+    permission_classes = [AllowAny]
 
